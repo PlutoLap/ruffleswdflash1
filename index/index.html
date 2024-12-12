@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruffle Flash Emulator</title>
+    
+    <!-- Include the Ruffle.js script -->
+    <script src="assets/js/ruffle.js"></script> <!-- Adjust the path as necessary -->
+    
+</head>
+<body>
+    <h1>Ruffle Flash Player Example</h1>
+    
+    <!-- Ruffle player container -->
+    <div id="flash-player-container">
+        <h2>My Flash Content</h2>
+        
+        <!-- Embed your Flash content here -->
+        <div id="flash-content"></div>
+        
+        <script>
+            // Initialize Ruffle and load the SWF file
+            var ruffle = RufflePlayer.newest();
+            var container = document.getElementById("flash-content");
+            var player = ruffle.createPlayer();
+            container.appendChild(player);
+            player.load("assets/swf/your-file.swf"); <!-- Adjust the path as necessary -->
+        </script>
+    </div>
+</body>
+</html>
